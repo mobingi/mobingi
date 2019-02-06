@@ -1,6 +1,6 @@
 [![logo](./logos/mobingi-205x119.png)](https://mobingi.com/)
 
-[![Build status](https://ci.appveyor.com/api/projects/status/k7tmyr3l4dws4usd/branch/master?svg=true)](https://ci.appveyor.com/project/flowerinthenight/mobingi/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/98feyjxtf91xhrdf/branch/master?svg=true)](https://ci.appveyor.com/project/flowerinthenight/mobingi/branch/master)
 
 # mobingi
 

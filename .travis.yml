@@ -1,11 +1,10 @@
 os:
-- linux
 - osx
 
 language: go
 
 go:
-- 1.9.2
+- 1.11.5
 
 addons:
   apt:
@@ -18,28 +17,22 @@ before_install:
   fi
 
 script:
-- go test -v $(go list ./... | grep -v /vendor/) -cover
-- if [[ "$TRAVIS_BRANCH" == "$TRAVIS_TAG" ]]; then
-    echo "Build with version ${TRAVIS_TAG}";
-    go build -v -ldflags "-X github.com/mobingi/mobingi-cli/cmd.version=${TRAVIS_TAG}";
-  else
-    echo "Start unversioned build";
-    go build -v;
-  fi
+- GO111MODULE=on GOFLAGS=-mod=vendor go test -v ./...
+- GO111MODULE=on GOFLAGS=-mod=vendor go build -v
 
 after_success:
 - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-    export FILE_TO_UPLOAD=mobingi-cli-${TRAVIS_TAG}-darwin-amd64.tar.gz;
+    export FILE_TO_UPLOAD=mobingi-${TRAVIS_TAG}-darwin-amd64.tar.gz;
   else
-    export FILE_TO_UPLOAD=mobingi-cli-${TRAVIS_TAG}-${TRAVIS_OS_NAME}-amd64.tar.gz;
+    export FILE_TO_UPLOAD=mobingi-${TRAVIS_TAG}-${TRAVIS_OS_NAME}-amd64.tar.gz;
   fi
-- tar cvzf ${FILE_TO_UPLOAD} mobingi-cli
+- tar cvzf ${FILE_TO_UPLOAD} mobingi
 - ls -laF
 
 deploy:
   provider: releases
   api_key:
-    secure: ldzG+n92CICeD4HeRB74jRxPK51WiuMgjkwbLMyqjZpaPtLoRJADUPDng/qy88FNyuZlfSvOb8+r554e2lLNa7ddaKN58UzhDAqIAo54LaYA8RGNHZSH/Fy2gwchoedZlolJzdHWujyzNtOHEB2BHXJseYtALUiqNdSLy1oX8KhwKNiOBuZFFkCcDoDcOJ0ncjTuFgpxDLJu1F2vhiufnNFt7Sq8FFC9Dxa7viUurLln/Qv08m0yreg7YSeHoo4SssEnWU0K76EHyU5LifawOOxvxEoR5p4at3NWUX8E08MrjZs3/JwdXEU84Q5+8iOj/I24bYBInBfCYkB1Rsy/729ZSb+WMlR2RgUoE34W8t3iUkr6ii+Z5sPP8OFcAFvxq+ERKXS2SS3EFM5DisbbmiRFedxXNL3vQV3l0ar+HgRKVO6mqDuZAK21YLhJKiEpbIqa2cf58XSF5yTGd7cL4924TgbkjuJmw88wAxHlI+gQNbRLeK2zyU3kMy1MLV6BfKmC/aEEommgAY3Q+gTLT+rnNJY1EkK0NHe9dPawiM+ptLFqeNi7O2yz4HjuUPzyAn8oFcBe/cGjgUVdkuRzfyjK6raq98sLQlstLtu+C8FC9A49K2yBfDQy9M8kfLdSdAdhifFZBGX72pWsB+zZh5XLu8XFlGpSXWLc8ItyKgQ=
+    secure: bYpTt3c999V+ZPsxh4ymXwiHzgzDnhHZgsxBXKOMS/m34EgrVvJOPs2mOTEtQCYUzjRQagPCymO/CI4nFK0x1a3Hg6tezb6sQnL9sTvkfhnstMDiX+CX+IHzQFUtRMC5gNNn/46TwfVX18PwAgjbUrNWUvk+bC+vOhHZsu8qi+AChvd7cbIriv8mS3K6Z1o6fI8e9+A0FJvX5WADeZ+YFZYs4KizmOZlu4x8kj9kkWNN6/rYX1ifszSOH+1QG03oSlBemCBYeDH6FaYuN/I5PAXqlibcmIF5hWD78vLh4DqQ/rrGlWF1EhM7u3OMAvNFj0pe5Cbia3vf195yGIPJsX74tF1UdyewIfBW8FX7fI4xnL6sNild1CNCSXlFXuIUoqmii70j1zDwDnLfq5RJ5+D9+JgexFMsUk5TfSJ0BOGofaKeuTSti83XvOmpa3Jz2MrRrfR12nj4RL4ilkrBYykR1nqf+uaHg6cDVSzDyBBCzz6bPgqpjGs/2rLiKKP5siMSnt9+CO+FnSG47SZ0joEkt0F1bdJgPTkuglnaW/OO82QpsEtZpp8oMAX/0Leos4QXHJSMHBKJMdWGfTdq1t/XLt+XWhc06cRGXwabmgt+w8ANeDzwZJVdjQIYxhBseeezC3b1CO6tOSzbqCrECvmgzPH8a6z3QqV1TeeRMZU=
   file: '${FILE_TO_UPLOAD}'
   skip_cleanup: true
   overwrite: true

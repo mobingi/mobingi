@@ -10,7 +10,6 @@ jobs:
         name: build
         shell: /bin/bash
         command: |
-          echo "build"
           GO111MODULE=on GOFLAGS=-mod=vendor go test -v ./...
           GO111MODULE=on GOFLAGS=-mod=vendor go build -v
           ls -laF
@@ -25,10 +24,12 @@ jobs:
         name: buildanddeploy
         shell: /bin/bash
         command: |
-          echo "build and deploy"
           GO111MODULE=on GOFLAGS=-mod=vendor go test -v ./...
           GO111MODULE=on GOFLAGS=-mod=vendor go build -v
+          tar cvzf mobingi-${CIRCLE_TAG}-linux-amd64.tar.gz mobingi
           ls -laF
+          go get -u -v github.com/tcnksm/ghr
+          ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${CIRCLE_TAG} ./mobingi-${CIRCLE_TAG}-linux-amd64.tar.gz
 
 workflows:
   version: 2

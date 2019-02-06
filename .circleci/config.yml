@@ -1,0 +1,12 @@
+version: 2
+jobs:
+  build:
+    docker:
+    # specify the version
+    - image: circleci/golang:1.11.5
+      
+    working_directory: /go/src/github.com/mobingi/mobingi
+    steps:
+    - checkout
+
+    - run: GOFLAGS=-mod=vendor go test -v ./...

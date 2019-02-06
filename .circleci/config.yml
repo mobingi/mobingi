@@ -3,11 +3,9 @@ jobs:
   build:
     docker:
     - image: circleci/golang:1.11.5
-      
     working_directory: /go/src/github.com/mobingi/mobingi
     steps:
     - checkout
-
     - run:
         name: build
         shell: /bin/bash
@@ -17,8 +15,14 @@ jobs:
           GO111MODULE=on GOFLAGS=-mod=vendor go build -v
           ls -laF
 
+  build-deploy:
+    docker:
+    - image: circleci/golang:1.11.5
+    working_directory: /go/src/github.com/mobingi/mobingi
+    steps:
+    - checkout
     - run:
-        name: build-deploy
+        name: buildanddeploy
         shell: /bin/bash
         command: |
           echo "build and deploy"

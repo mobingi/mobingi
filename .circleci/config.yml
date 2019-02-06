@@ -9,7 +9,7 @@ jobs:
     steps:
     - checkout
 
-    - run: GOFLAGS=-mod=vendor go test -v ./...
+    - run:
         name: build
         shell: /bin/bash
         command: |

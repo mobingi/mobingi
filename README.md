@@ -1,5 +1,6 @@
 [![logo](./logos/mobingi-205x119.png)](https://mobingi.com/)
 
+[![CircleCI](https://circleci.com/gh/mobingi/mobingi/tree/master.svg?style=svg)](https://circleci.com/gh/mobingi/mobingi/tree/master)
 [![Build status](https://ci.appveyor.com/api/projects/status/98feyjxtf91xhrdf/branch/master?svg=true)](https://ci.appveyor.com/project/flowerinthenight/mobingi/branch/master)
 
 # mobingi

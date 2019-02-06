@@ -2,7 +2,6 @@ version: 2
 jobs:
   build:
     docker:
-    # specify the version
     - image: circleci/golang:1.11.5
       
     working_directory: /go/src/github.com/mobingi/mobingi
@@ -13,7 +12,28 @@ jobs:
         name: build
         shell: /bin/bash
         command: |
+          echo "build"
           GO111MODULE=on GOFLAGS=-mod=vendor go test -v ./...
           GO111MODULE=on GOFLAGS=-mod=vendor go build -v
           ls -laF
 
+    - run:
+        name: build-deploy
+        shell: /bin/bash
+        command: |
+          echo "build and deploy"
+          GO111MODULE=on GOFLAGS=-mod=vendor go test -v ./...
+          GO111MODULE=on GOFLAGS=-mod=vendor go build -v
+          ls -laF
+
+workflows:
+  version: 2
+  untagged-build:
+    jobs:
+    - build
+  tagged-build:
+    jobs:
+    - build:
+        filters:
+          tags:
+            only: /^v.*/

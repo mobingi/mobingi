@@ -33,7 +33,6 @@ artifacts:
     name: mobingi
 
 deploy:
-  description: "Today we're announcing mobingi $(appveyor_repo_tag_name). See the documentation on https://learn.mobingi.com/cli."
   provider: GitHub
   auth_token:
     secure: kBFWX6rgl9iy7aw+3psKgFDM+ougnfSsSmFxgQILcML015b2u6W5jzIXHmIKIq+L

@@ -10,3 +10,10 @@ jobs:
     - checkout
 
     - run: GOFLAGS=-mod=vendor go test -v ./...
+        name: build
+        shell: /bin/bash
+        command: |
+          GO111MODULE=on GOFLAGS=-mod=vendor go test -v ./...
+          GO111MODULE=on GOFLAGS=-mod=vendor go build -v
+          ls -laF
+

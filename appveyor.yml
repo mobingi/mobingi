@@ -37,7 +37,7 @@ deploy:
   auth_token:
     secure: kBFWX6rgl9iy7aw+3psKgFDM+ougnfSsSmFxgQILcML015b2u6W5jzIXHmIKIq+L
   artifact: mobingi
-  draft: true
+  # draft: true
   on:
     branch: master
     appveyor_repo_tag: true

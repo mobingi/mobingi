@@ -31,6 +31,7 @@ github.com/magiconair/properties v1.7.4 h1:UVo0TkHGd4lQSN1dVDzs9URCIgReuSIcCXpAV
 github.com/magiconair/properties v1.7.4/go.mod h1:PppfXfuXeibc/6YijjN8zIbojt8czPbwD3XqdrwzmxQ=
 github.com/mattn/go-colorable v0.0.9/go.mod h1:9vuHe8Xs5qXnSaW/c/ABM9alt+Vo+STaOChaDxuIBZU=
 github.com/mattn/go-isatty v0.0.4/go.mod h1:M+lRXTBqGeGNdLjl/ufCoiOlB5xdOkqRJdNxMWT7Zi4=
+github.com/mitchellh/go-homedir v0.0.0-20161203194507-b8bc1bf76747 h1:eQox4Rh4ewJF+mqYPxCkmBAirRnPaHEB26UkNuPyjlk=
 github.com/mitchellh/go-homedir v0.0.0-20161203194507-b8bc1bf76747/go.mod h1:SfyaCUpYCn1Vlf4IUYiD9fPX4A5wJrkLzIz1N1q0pr0=
 github.com/mitchellh/mapstructure v0.0.0-20180111000720-b4575eea38cc h1:5T6hzGUO5OrL6MdYXYoLQtRWJDDgjdlOVBn9mIqGY1g=
 github.com/mitchellh/mapstructure v0.0.0-20180111000720-b4575eea38cc/go.mod h1:FVVH3fgwuzCH5S8UJGiWEs2h04kUh9fWfEaFds41c1Y=
@@ -66,6 +67,7 @@ github.com/spf13/cobra v0.0.1 h1:zZh3X5aZbdnoj+4XkaBxKfhO4ot82icYdhhREIAXIj8=
 github.com/spf13/cobra v0.0.1/go.mod h1:1l0Ry5zgKvJasoi3XT1TypsSe7PqH0Sj9dhYf7v3XqQ=
 github.com/spf13/jwalterweatherman v0.0.0-20180109140146-7c0cea34c8ec h1:2ZXvIUGghLpdTVHR1UfvfrzoVlZaE/yOWC5LueIHZig=
 github.com/spf13/jwalterweatherman v0.0.0-20180109140146-7c0cea34c8ec/go.mod h1:cQK4TGJAtQXfYWX+Ddv3mKDzgVb68N+wFjFa4jdeBTo=
+github.com/spf13/pflag v1.0.0 h1:oaPbdDe/x0UncahuwiPxW1GYJyilRAdsPnq3e1yaPcI=
 github.com/spf13/pflag v1.0.0/go.mod h1:DYY7MBk1bdzusC3SYhjObp+wFpr4gzcvqqNjLnInEg4=
 github.com/spf13/viper v1.0.0 h1:RUA/ghS2i64rlnn4ydTfblY8Og8QzcPtCcHvgMn+w/I=
 github.com/spf13/viper v1.0.0/go.mod h1:A8kyI5cUJhb8N+3pkfONlcEcZbueH6nhAm0Fq7SrnBM=

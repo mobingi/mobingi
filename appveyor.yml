@@ -1,0 +1,49 @@
+version: "{build}"
+
+platform: x64
+
+branches:
+  only:
+    - master
+
+clone_folder: c:\gopath\src\github.com\mobingi\mobingi-cli
+
+environment:
+  GOPATH: c:\gopath
+  GOVERSION: 1.9.2
+
+install:  
+  - echo %PATH%
+  - echo %GOPATH%
+  - set PATH=%GOPATH%\bin;c:\go\bin;%PATH%
+  - go version
+  - go env
+
+build_script:
+  - go build -v
+  - go test -v ./cmd
+  - go test -v ./client
+
+after_build:
+  - 7z a mobingi-cli-%APPVEYOR_REPO_TAG_NAME%-windows-amd64.zip %APPVEYOR_BUILD_FOLDER%\mobingi-cli.exe
+  - dir /w
+  
+artifacts:
+  - path: mobingi-cli-$(appveyor_repo_tag_name)-windows-amd64.zip
+    name: mobingi-cli
+
+deploy:
+  description: "Today we're announcing mobingi-cli $(appveyor_repo_tag_name). See the documentation on https://learn.mobingi.com/cli."
+  provider: GitHub
+  auth_token:
+    secure: FI6YNxZmMUbbp8bZ96s5c9ayKq//yBalxavwX7RlmCVRS5yyi8Qrkr3CoSCt3wg3
+  artifact: mobingi-cli
+  draft: true
+  on:
+    branch: master
+    appveyor_repo_tag: true
+
+notifications:
+  - provider: Slack
+    incoming_webhook:
+      secure: JrW1YiaNWR8kRkpmFriLtdpVPuYsQCI9Moadv4158OwIERSuWfHs1CHREUPpZ9l6K43yEEZdOptPxpHCRLfjqr1CByqMxHx/zdWcUCHM3Ag=

@@ -6,11 +6,11 @@ branches:
   only:
     - master
 
-clone_folder: c:\gopath\src\github.com\mobingi\mobingi-cli
+clone_folder: c:\gopath\src\github.com\mobingi\mobingi
 
 environment:
   GOPATH: c:\gopath
-  GOVERSION: 1.9.2
+  GOVERSION: 1.11.5
 
 install:  
   - echo %PATH%
@@ -25,19 +25,19 @@ build_script:
   - go test -v ./client
 
 after_build:
-  - 7z a mobingi-cli-%APPVEYOR_REPO_TAG_NAME%-windows-amd64.zip %APPVEYOR_BUILD_FOLDER%\mobingi-cli.exe
+  - 7z a mobingi-%APPVEYOR_REPO_TAG_NAME%-windows-amd64.zip %APPVEYOR_BUILD_FOLDER%\mobingi.exe
   - dir /w
   
 artifacts:
-  - path: mobingi-cli-$(appveyor_repo_tag_name)-windows-amd64.zip
-    name: mobingi-cli
+  - path: mobingi-$(appveyor_repo_tag_name)-windows-amd64.zip
+    name: mobingi
 
 deploy:
-  description: "Today we're announcing mobingi-cli $(appveyor_repo_tag_name). See the documentation on https://learn.mobingi.com/cli."
+  description: "Today we're announcing mobingi $(appveyor_repo_tag_name). See the documentation on https://learn.mobingi.com/cli."
   provider: GitHub
   auth_token:
     secure: FI6YNxZmMUbbp8bZ96s5c9ayKq//yBalxavwX7RlmCVRS5yyi8Qrkr3CoSCt3wg3
-  artifact: mobingi-cli
+  artifact: mobingi
   draft: true
   on:
     branch: master

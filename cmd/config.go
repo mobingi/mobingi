@@ -3,8 +3,8 @@ package cmd
 import (
 	"time"
 
-	"github.com/mobingi/mobingi-cli/client/timeout"
-	"github.com/mobingi/mobingi-cli/pkg/cli/confmap"
+	"github.com/mobingi/mobingi/client/timeout"
+	"github.com/mobingi/mobingi/pkg/cli/confmap"
 	"github.com/mobingilabs/mobingi-sdk-go/client"
 	"github.com/spf13/viper"
 )

@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/mobingilabs/mobingi-sdk-go/pkg/cmdline"
+	"github.com/mobingi/sdk-go/pkg/util/cmdline"
 	"github.com/spf13/cobra"
 )
 

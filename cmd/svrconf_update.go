@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/mobingi/mobingi-cli/client"
-	"github.com/mobingi/mobingi-cli/pkg/cli"
+	"github.com/mobingi/mobingi/client"
+	"github.com/mobingi/mobingi/pkg/cli"
 	d "github.com/mobingilabs/mobingi-sdk-go/pkg/debug"
 	"github.com/spf13/cobra"
 )

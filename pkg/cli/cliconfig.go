@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	homedir "github.com/mitchellh/go-homedir"
-	"github.com/mobingi/mobingi-cli/client/timeout"
+	"github.com/mobingi/mobingi/client/timeout"
 	"github.com/mobingilabs/mobingi-sdk-go/pkg/cmdline"
 	"github.com/mobingilabs/mobingi-sdk-go/pkg/pretty"
 	"github.com/pkg/errors"

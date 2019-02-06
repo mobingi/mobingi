@@ -5,8 +5,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mobingi/mobingi-cli/pkg/cli"
-	"github.com/mobingi/mobingi-cli/pkg/cli/confmap"
+	"github.com/mobingi/mobingi/pkg/cli"
+	"github.com/mobingi/mobingi/pkg/cli/confmap"
 	"github.com/mobingilabs/mobingi-sdk-go/client"
 	"github.com/mobingilabs/mobingi-sdk-go/mobingi/session"
 	d "github.com/mobingilabs/mobingi-sdk-go/pkg/debug"

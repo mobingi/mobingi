@@ -3,7 +3,7 @@ package cmd
 import (
 	"os"
 
-	"github.com/mobingi/mobingi-cli/pkg/cli"
+	"github.com/mobingi/mobingi/pkg/cli"
 	d "github.com/mobingilabs/mobingi-sdk-go/pkg/debug"
 	"github.com/mobingilabs/mobingi-sdk-go/pkg/nativestore"
 	"github.com/spf13/cobra"

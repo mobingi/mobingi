@@ -11,9 +11,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mobingi/mobingi-cli/client/timeout"
-	"github.com/mobingi/mobingi-cli/pkg/cli"
-	"github.com/mobingi/mobingi-cli/pkg/cli/confmap"
+	"github.com/mobingi/mobingi/client/timeout"
+	"github.com/mobingi/mobingi/pkg/cli"
+	"github.com/mobingi/mobingi/pkg/cli/confmap"
 	"github.com/mobingilabs/mobingi-sdk-go/mobingi/credentials"
 	d "github.com/mobingilabs/mobingi-sdk-go/pkg/debug"
 	"github.com/pkg/errors"

@@ -1,11 +1,11 @@
-// Package mobingi-cli is a command line interface client for Mobingi API.
+// Package mobingi is a command line interface client for Mobingi services.
 package main
 
 import (
 	"log"
 
-	"github.com/mobingi/mobingi-cli/cmd"
-	"github.com/mobingilabs/mobingi-sdk-go/pkg/cmdline"
+	"github.com/mobingi/mobingi/cmd"
+	"github.com/mobingi/sdk-go/pkg/util/cmdline"
 )
 
 func main() {

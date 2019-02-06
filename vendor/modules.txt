@@ -9,7 +9,7 @@ github.com/docker/docker-credential-helpers/credentials
 github.com/docker/docker-credential-helpers/osxkeychain
 github.com/docker/docker-credential-helpers/pass
 github.com/docker/docker-credential-helpers/wincred
-# github.com/fatih/color v1.5.0
+# github.com/fatih/color v1.7.0
 github.com/fatih/color
 # github.com/fsnotify/fsnotify v1.4.7
 github.com/fsnotify/fsnotify
@@ -31,20 +31,15 @@ github.com/inconshreveable/mousetrap
 github.com/magiconair/properties
 # github.com/mattn/go-colorable v0.0.9
 github.com/mattn/go-colorable
-# github.com/mattn/go-isatty v0.0.3
+# github.com/mattn/go-isatty v0.0.4
 github.com/mattn/go-isatty
 # github.com/mitchellh/go-homedir v0.0.0-20161203194507-b8bc1bf76747
 github.com/mitchellh/go-homedir
 # github.com/mitchellh/mapstructure v0.0.0-20180111000720-b4575eea38cc
 github.com/mitchellh/mapstructure
-# github.com/mobingi/mobingi-cli v1.0.10
-github.com/mobingi/mobingi-cli/cmd
-github.com/mobingi/mobingi-cli/client/timeout
-github.com/mobingi/mobingi-cli/pkg/cli
-github.com/mobingi/mobingi-cli/pkg/cli/confmap
-github.com/mobingi/mobingi-cli/client
+# github.com/mobingi/sdk-go v0.0.0-20190201071416-1efc90734f2e
+github.com/mobingi/sdk-go/pkg/util/cmdline
 # github.com/mobingilabs/mobingi-sdk-go v0.1.31
-github.com/mobingilabs/mobingi-sdk-go/pkg/cmdline
 github.com/mobingilabs/mobingi-sdk-go/mobingi/credentials
 github.com/mobingilabs/mobingi-sdk-go/pkg/debug
 github.com/mobingilabs/mobingi-sdk-go/client
@@ -54,6 +49,7 @@ github.com/mobingilabs/mobingi-sdk-go/mobingi/rbac
 github.com/mobingilabs/mobingi-sdk-go/mobingi/registry
 github.com/mobingilabs/mobingi-sdk-go/mobingi/sesha3
 github.com/mobingilabs/mobingi-sdk-go/mobingi/session
+github.com/mobingilabs/mobingi-sdk-go/pkg/cmdline
 github.com/mobingilabs/mobingi-sdk-go/pkg/filetype
 github.com/mobingilabs/mobingi-sdk-go/pkg/nativestore
 github.com/mobingilabs/mobingi-sdk-go/pkg/pretty
@@ -61,7 +57,7 @@ github.com/mobingilabs/mobingi-sdk-go/pkg/pretty
 github.com/moul/gotty-client
 # github.com/pelletier/go-toml v1.1.0
 github.com/pelletier/go-toml
-# github.com/pkg/errors v0.8.0
+# github.com/pkg/errors v0.8.1
 github.com/pkg/errors
 # github.com/skratchdot/open-golang v0.0.0-20160302144031-75fb7ed4208c
 github.com/skratchdot/open-golang/open
@@ -78,13 +74,13 @@ github.com/spf13/jwalterweatherman
 github.com/spf13/pflag
 # github.com/spf13/viper v1.0.0
 github.com/spf13/viper
-# golang.org/x/crypto v0.0.0-20180119074636-ee41a25c63fb
+# golang.org/x/crypto v0.0.0-20180904163835-0709b304e793
 golang.org/x/crypto/ssh/terminal
-# golang.org/x/sys v0.0.0-20180117170059-2c42eef0765b
+# golang.org/x/sys v0.0.0-20190116161447-11f53e031339
 golang.org/x/sys/unix
 golang.org/x/sys/windows
-# golang.org/x/text v0.0.0-20171227012246-e19ae1496984
+# golang.org/x/text v0.3.0
 golang.org/x/text/transform
 golang.org/x/text/unicode/norm
-# gopkg.in/yaml.v2 v2.0.0
+# gopkg.in/yaml.v2 v2.2.1
 gopkg.in/yaml.v2

@@ -3,7 +3,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/mobingi/mobingi-cli/pkg/cli"
+	"github.com/mobingi/mobingi/pkg/cli"
 	"github.com/mobingilabs/mobingi-sdk-go/client"
 )
 

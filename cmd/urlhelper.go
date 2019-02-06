@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/mobingi/mobingi-cli/pkg/cli/confmap"
+	"github.com/mobingi/mobingi/pkg/cli/confmap"
 	"github.com/spf13/viper"
 )
 

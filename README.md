@@ -3,7 +3,7 @@
 [![CircleCI](https://circleci.com/gh/mobingi/mobingi/tree/master.svg?style=svg)](https://circleci.com/gh/mobingi/mobingi/tree/master)
 [![Build status](https://ci.appveyor.com/api/projects/status/98feyjxtf91xhrdf/branch/master?svg=true)](https://ci.appveyor.com/project/flowerinthenight/mobingi/branch/master)
 
-# mobingi
+# Overview
 
 `mobingi` is the official command line interface for [Mobingi](https://mobingi.com/) API and services. 
 

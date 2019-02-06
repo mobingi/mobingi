@@ -1,0 +1,51 @@
+os:
+- linux
+- osx
+
+language: go
+
+go:
+- 1.9.2
+
+addons:
+  apt:
+    packages:
+    - libsecret-1-dev
+
+before_install:
+- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+    sudo apt-get update -q && sudo apt-get install pkg-config -y;
+  fi
+
+script:
+- go test -v $(go list ./... | grep -v /vendor/) -cover
+- if [[ "$TRAVIS_BRANCH" == "$TRAVIS_TAG" ]]; then
+    echo "Build with version ${TRAVIS_TAG}";
+    go build -v -ldflags "-X github.com/mobingi/mobingi-cli/cmd.version=${TRAVIS_TAG}";
+  else
+    echo "Start unversioned build";
+    go build -v;
+  fi
+
+after_success:
+- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+    export FILE_TO_UPLOAD=mobingi-cli-${TRAVIS_TAG}-darwin-amd64.tar.gz;
+  else
+    export FILE_TO_UPLOAD=mobingi-cli-${TRAVIS_TAG}-${TRAVIS_OS_NAME}-amd64.tar.gz;
+  fi
+- tar cvzf ${FILE_TO_UPLOAD} mobingi-cli
+- ls -laF
+
+deploy:
+  provider: releases
+  api_key:
+    secure: ldzG+n92CICeD4HeRB74jRxPK51WiuMgjkwbLMyqjZpaPtLoRJADUPDng/qy88FNyuZlfSvOb8+r554e2lLNa7ddaKN58UzhDAqIAo54LaYA8RGNHZSH/Fy2gwchoedZlolJzdHWujyzNtOHEB2BHXJseYtALUiqNdSLy1oX8KhwKNiOBuZFFkCcDoDcOJ0ncjTuFgpxDLJu1F2vhiufnNFt7Sq8FFC9Dxa7viUurLln/Qv08m0yreg7YSeHoo4SssEnWU0K76EHyU5LifawOOxvxEoR5p4at3NWUX8E08MrjZs3/JwdXEU84Q5+8iOj/I24bYBInBfCYkB1Rsy/729ZSb+WMlR2RgUoE34W8t3iUkr6ii+Z5sPP8OFcAFvxq+ERKXS2SS3EFM5DisbbmiRFedxXNL3vQV3l0ar+HgRKVO6mqDuZAK21YLhJKiEpbIqa2cf58XSF5yTGd7cL4924TgbkjuJmw88wAxHlI+gQNbRLeK2zyU3kMy1MLV6BfKmC/aEEommgAY3Q+gTLT+rnNJY1EkK0NHe9dPawiM+ptLFqeNi7O2yz4HjuUPzyAn8oFcBe/cGjgUVdkuRzfyjK6raq98sLQlstLtu+C8FC9A49K2yBfDQy9M8kfLdSdAdhifFZBGX72pWsB+zZh5XLu8XFlGpSXWLc8ItyKgQ=
+  file: '${FILE_TO_UPLOAD}'
+  skip_cleanup: true
+  overwrite: true
+  on:
+    tags: true
+
+notifications:
+  slack:
+    secure: C8FVdl0GIucS3dRXbe3p4/ujfDeA0ubk572EFo47VfU1tBdaDi9C8ouqvapaknRHwDtvbOtdiR9HylNp/C5veFou4osmoRIprET9hf5XsJd/0vlu8JdxJzuRnRfE6I3uhdb2vNjHxWHQhx7MK5LPEfIjMDXOfZkT5idrWPl3OKMHFDBX5KMBvIj0zYsRhVnphwNxJOJLJtJk2VGMWasqcs8kGcOSPrtivBS6PKyJSTQEVQ3lngUrnJx2ly7MTXvYJfGA+xMNfZY85aDF/PqQ7VcjwkE+TgKX3wVJBkI4Iu1anGAGFD7rEYmnINJLKQntPmr0QBKOXOS/Fdm9i0CnHMwYrDLYKIokRlRc6zZNTXmEsBPZVyOakUSUTk/E5qFhIafYQYIxOgyz0r2n3OqlkPJ352ZLbopWTilJsn80Tsmh0pCncvqway+Cn2DYHnPuI4C+ncFOjiOmP9I2YQkAYo31+yutPqKArjUBHx4oqaV0kExhwpliV1vVezkddgmtomFrgP9EjqQDaiuvPnnTnxvIhhXKSRBJP9QrnqvQ1KVpxrqfJ9EDGlckCRy5/w57KA7YxdE3GGhl/hw/OBGcb5SDmrMjSTbmvGcdfW4nRaF9bL5uroZ2gHAN/zX6ae++27qqoJPMBOVpfI4kktGmvU2WhdQcvVGD1IeTargHWg4=

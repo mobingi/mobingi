@@ -16,11 +16,13 @@ install:
   - echo %PATH%
   - echo %GOPATH%
   - set PATH=%GOPATH%\bin;c:\go\bin;%PATH%
+  - set GO111MODULE=on
+  - set GOFLAGS=-mod=vendor
   - go version
   - go env
 
 build_script:
-  - GO111MODULE=on GOFLAGS=-mod=vendor go build -v
+  - go build -v
 
 after_build:
   - 7z a mobingi-%APPVEYOR_REPO_TAG_NAME%-windows-amd64.zip %APPVEYOR_BUILD_FOLDER%\mobingi.exe

@@ -20,9 +20,7 @@ install:
   - go env
 
 build_script:
-  - go build -v
-  - go test -v ./cmd
-  - go test -v ./client
+  - GO111MODULE=on GOFLAGS=-mod=vendor go build -v
 
 after_build:
   - 7z a mobingi-%APPVEYOR_REPO_TAG_NAME%-windows-amd64.zip %APPVEYOR_BUILD_FOLDER%\mobingi.exe

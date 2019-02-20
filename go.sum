@@ -8,8 +8,8 @@ github.com/danieljoos/wincred v1.0.1 h1:fcRTaj17zzROVqni2FiToKUVg3MmJ4NtMSGCySPI
 github.com/danieljoos/wincred v1.0.1/go.mod h1:SnuYRW9lp1oJrZX/dXJqr0cPK5gYXqx3EJbmjhLdK9U=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/docker/docker-credential-helpers v0.6.0 h1:5bhDRLn1roGiNjz8IezRngHxMfoeaXGyr0BeMHq4rD8=
-github.com/docker/docker-credential-helpers v0.6.0/go.mod h1:WRaJzqw3CTB9bk10avuGsjVBZsD05qeibJ1/TYlvc0Y=
+github.com/docker/docker-credential-helpers v0.6.1 h1:Dq4iIfcM7cNtddhLVWe9h4QDjsi4OER3Z8voPu/I52g=
+github.com/docker/docker-credential-helpers v0.6.1/go.mod h1:WRaJzqw3CTB9bk10avuGsjVBZsD05qeibJ1/TYlvc0Y=
 github.com/fatih/color v1.7.0/go.mod h1:Zm6kSWBoL9eyXnKyktHP6abPY2pDugNf5KwzbycvMj4=
 github.com/fsnotify/fsnotify v1.4.7/go.mod h1:jwhsz4b93w/PPRr/qN1Yymfu8t87LnFCMoQvtojpjFo=
 github.com/golang/protobuf v1.2.0/go.mod h1:6lQm79b+lXiMfvg/cZm0SGofjICqVBUtrP5yJMmIC1U=
@@ -35,8 +35,8 @@ github.com/mitchellh/go-homedir v0.0.0-20161203194507-b8bc1bf76747 h1:eQox4Rh4ew
 github.com/mitchellh/go-homedir v0.0.0-20161203194507-b8bc1bf76747/go.mod h1:SfyaCUpYCn1Vlf4IUYiD9fPX4A5wJrkLzIz1N1q0pr0=
 github.com/mitchellh/mapstructure v0.0.0-20180111000720-b4575eea38cc h1:5T6hzGUO5OrL6MdYXYoLQtRWJDDgjdlOVBn9mIqGY1g=
 github.com/mitchellh/mapstructure v0.0.0-20180111000720-b4575eea38cc/go.mod h1:FVVH3fgwuzCH5S8UJGiWEs2h04kUh9fWfEaFds41c1Y=
-github.com/mobingi/sdk-go v0.0.0-20190201071416-1efc90734f2e h1:mDOhOAqmsO1Lpv07M3M5Y1WpnAbXmjxgDxaURu9N6i4=
-github.com/mobingi/sdk-go v0.0.0-20190201071416-1efc90734f2e/go.mod h1:TOAS99OuBwe3fMmi6CIzQuG47rhv5QEq3hAoYVr+TQE=
+github.com/mobingi/sdk-go v0.0.0-20190220163044-2771e588cd6d h1:oYj48A/m52ER1KRon2t5QX/ZHM7x0FFrVBqX7MaJ/X0=
+github.com/mobingi/sdk-go v0.0.0-20190220163044-2771e588cd6d/go.mod h1:x2tCajZdSMjyvYRQujYQ1+xxRojMLjMZzasJW7z8AU4=
 github.com/mobingilabs/mobingi-sdk-go v0.1.31 h1:7YBM6ljUYCc85pxlaHAEUepcG3SQ0kP5uChLcZMSyFA=
 github.com/mobingilabs/mobingi-sdk-go v0.1.31/go.mod h1:7v5FiajaUdXD7m9A+F3RP16DXYxRGyNgxRzf+nRCJcU=
 github.com/moul/gotty-client v1.6.1 h1:jxKty9P0726qvnc2WCRArlt+6lVT/VmPgyYc8nEOnd0=

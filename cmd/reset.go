@@ -4,8 +4,8 @@ import (
 	"os"
 
 	"github.com/mobingi/mobingi/pkg/cli"
+	"github.com/mobingi/sdk-go/pkg/nativestore"
 	d "github.com/mobingilabs/mobingi-sdk-go/pkg/debug"
-	"github.com/mobingilabs/mobingi-sdk-go/pkg/nativestore"
 	"github.com/spf13/cobra"
 )
 

@@ -4,7 +4,7 @@ github.com/Sirupsen/logrus
 github.com/creack/goselect
 # github.com/danieljoos/wincred v1.0.1
 github.com/danieljoos/wincred
-# github.com/docker/docker-credential-helpers v0.6.0
+# github.com/docker/docker-credential-helpers v0.6.1
 github.com/docker/docker-credential-helpers/credentials
 github.com/docker/docker-credential-helpers/osxkeychain
 github.com/docker/docker-credential-helpers/pass
@@ -37,8 +37,9 @@ github.com/mattn/go-isatty
 github.com/mitchellh/go-homedir
 # github.com/mitchellh/mapstructure v0.0.0-20180111000720-b4575eea38cc
 github.com/mitchellh/mapstructure
-# github.com/mobingi/sdk-go v0.0.0-20190201071416-1efc90734f2e
+# github.com/mobingi/sdk-go v0.0.0-20190220163044-2771e588cd6d
 github.com/mobingi/sdk-go/pkg/util/cmdline
+github.com/mobingi/sdk-go/pkg/nativestore
 # github.com/mobingilabs/mobingi-sdk-go v0.1.31
 github.com/mobingilabs/mobingi-sdk-go/mobingi/credentials
 github.com/mobingilabs/mobingi-sdk-go/pkg/debug
@@ -51,7 +52,6 @@ github.com/mobingilabs/mobingi-sdk-go/mobingi/sesha3
 github.com/mobingilabs/mobingi-sdk-go/mobingi/session
 github.com/mobingilabs/mobingi-sdk-go/pkg/cmdline
 github.com/mobingilabs/mobingi-sdk-go/pkg/filetype
-github.com/mobingilabs/mobingi-sdk-go/pkg/nativestore
 github.com/mobingilabs/mobingi-sdk-go/pkg/pretty
 # github.com/moul/gotty-client v1.6.1
 github.com/moul/gotty-client

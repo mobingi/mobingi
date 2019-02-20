@@ -11,6 +11,7 @@ require (
 	github.com/jtolds/gls v4.2.1+incompatible // indirect
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/magiconair/properties v1.7.4 // indirect
+	github.com/mattn/go-colorable v0.1.0 // indirect
 	github.com/mitchellh/go-homedir v0.0.0-20161203194507-b8bc1bf76747
 	github.com/mitchellh/mapstructure v0.0.0-20180111000720-b4575eea38cc // indirect
 	github.com/mobingi/sdk-go v0.0.0-20190220163044-2771e588cd6d
@@ -31,6 +32,7 @@ require (
 	github.com/spf13/pflag v1.0.0 // indirect
 	github.com/spf13/viper v1.0.0
 	github.com/stretchr/testify v1.3.0 // indirect
+	golang.org/x/sys v0.0.0-20190220154126-629670e5acc5 // indirect
 	gopkg.in/airbrake/gobrake.v2 v2.0.9 // indirect
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	gopkg.in/gemnasium/logrus-airbrake-hook.v2 v2.1.2 // indirect

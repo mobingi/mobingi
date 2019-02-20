@@ -7,7 +7,7 @@
 
 `mobingi` is the official command line interface for [Mobingi](https://mobingi.com/) API and services. 
 
-See the documentation on https://docs.mobingi.com/mobingi-alm/cli-reference/mobingi-cli-documentation.
+See the documentation on https://docs.mobingi.com/v/cli-en/.
 
 # Getting started
 

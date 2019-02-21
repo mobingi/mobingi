@@ -40,7 +40,6 @@ github.com/mitchellh/go-homedir
 github.com/mitchellh/mapstructure
 # github.com/mobingi/sdk-go v0.0.0-20190220163044-2771e588cd6d
 github.com/mobingi/sdk-go/pkg/util/cmdline
-github.com/mobingi/sdk-go/pkg/nativestore
 # github.com/mobingilabs/mobingi-sdk-go v0.1.32
 github.com/mobingilabs/mobingi-sdk-go/mobingi/credentials
 github.com/mobingilabs/mobingi-sdk-go/pkg/debug

@@ -7,11 +7,11 @@ import (
 	"github.com/mobingi/mobingi/client/timeout"
 	"github.com/mobingi/mobingi/pkg/cli"
 	"github.com/mobingi/mobingi/pkg/cli/confmap"
+	"github.com/mobingi/sdk-go/pkg/util/simplelog"
 	sdkclient "github.com/mobingilabs/mobingi-sdk-go/client"
 	"github.com/mobingilabs/mobingi-sdk-go/mobingi/credentials"
 	"github.com/mobingilabs/mobingi-sdk-go/mobingi/session"
 	"github.com/mobingilabs/mobingi-sdk-go/pkg/cmdline"
-	d "github.com/mobingilabs/mobingi-sdk-go/pkg/debug"
 	"github.com/mobingilabs/mobingi-sdk-go/pkg/nativestore"
 	"github.com/mobingilabs/mobingi-sdk-go/pkg/pretty"
 	"github.com/pkg/errors"
@@ -192,17 +192,17 @@ func login(cmd *cobra.Command, args []string) {
 	err = nativestore.Set(cli.CliLabel, cli.CliUrl, nid, nsec)
 	if err != nil {
 		if cnf.Verbose {
-			d.Error("Error in accessing native store, will use config file.")
+			simplelog.Error("Error in accessing native store, will use config file.")
 		}
 
 		if cnf.Debug {
-			d.ErrorD(err)
+			simplelog.ErrorD(err)
 		}
 	}
 
 	if cnf.Verbose {
-		d.Info("apiver:", "v"+fmt.Sprintf("%d", getApiVersionInt()))
-		d.Info("token:", sess.AccessToken)
+		simplelog.Info("apiver:", "v"+fmt.Sprintf("%d", getApiVersionInt()))
+		simplelog.Info("token:", sess.AccessToken)
 	}
 
 	cnf.AccessToken = sess.AccessToken
@@ -213,7 +213,7 @@ func login(cmd *cobra.Command, args []string) {
 	err = viper.ReadInConfig()
 	cli.ErrorExit(err, 1)
 
-	d.Info("Login successful.")
+	simplelog.Info("Login successful.")
 }
 
 func fval(cmd *cobra.Command, flag string, defval interface{}) interface{} {

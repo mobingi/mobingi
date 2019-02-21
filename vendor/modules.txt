@@ -53,6 +53,7 @@ github.com/mobingilabs/mobingi-sdk-go/mobingi/sesha3
 github.com/mobingilabs/mobingi-sdk-go/mobingi/session
 github.com/mobingilabs/mobingi-sdk-go/pkg/cmdline
 github.com/mobingilabs/mobingi-sdk-go/pkg/filetype
+github.com/mobingilabs/mobingi-sdk-go/pkg/nativestore
 github.com/mobingilabs/mobingi-sdk-go/pkg/pretty
 # github.com/moul/gotty-client v1.7.0
 github.com/moul/gotty-client

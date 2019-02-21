@@ -7,7 +7,6 @@ require (
 	github.com/gorilla/websocket v1.4.0 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/jtolds/gls v4.2.1+incompatible // indirect
-	github.com/mattn/go-colorable v0.1.0 // indirect
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/mobingi/sdk-go v0.0.0-20190220163044-2771e588cd6d
 	github.com/mobingilabs/mobingi-sdk-go v0.1.32
@@ -19,6 +18,5 @@ require (
 	github.com/smartystreets/goconvey v0.0.0-20181108003508-044398e4856c // indirect
 	github.com/spf13/cobra v0.0.3
 	github.com/spf13/viper v1.3.1
-	golang.org/x/sys v0.0.0-20190220154126-629670e5acc5 // indirect
 	gopkg.in/yaml.v2 v2.2.2
 )

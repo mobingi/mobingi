@@ -7,12 +7,12 @@ import (
 	"github.com/mobingi/mobingi/client/timeout"
 	"github.com/mobingi/mobingi/pkg/cli"
 	"github.com/mobingi/mobingi/pkg/cli/confmap"
-	ns "github.com/mobingi/sdk-go/pkg/nativestore"
 	sdkclient "github.com/mobingilabs/mobingi-sdk-go/client"
 	"github.com/mobingilabs/mobingi-sdk-go/mobingi/credentials"
 	"github.com/mobingilabs/mobingi-sdk-go/mobingi/session"
 	"github.com/mobingilabs/mobingi-sdk-go/pkg/cmdline"
 	d "github.com/mobingilabs/mobingi-sdk-go/pkg/debug"
+	"github.com/mobingilabs/mobingi-sdk-go/pkg/nativestore"
 	"github.com/mobingilabs/mobingi-sdk-go/pkg/pretty"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
@@ -187,9 +187,9 @@ func login(cmd *cobra.Command, args []string) {
 	}
 
 	// workaround/hack: remove our previous key
-	_ = ns.Del(cli.CliLabel, "https://github.com/mobingi/mobingi-cli")
+	_ = nativestore.Del(cli.CliLabel, "https://github.com/mobingi/mobingi-cli")
 
-	err = ns.Set(cli.CliLabel, cli.CliUrl, nid, nsec)
+	err = nativestore.Set(cli.CliLabel, cli.CliUrl, nid, nsec)
 	if err != nil {
 		if cnf.Verbose {
 			d.Error("Error in accessing native store, will use config file.")

@@ -26,13 +26,15 @@ github.com/konsorten/go-windows-terminal-sequences v1.0.1/go.mod h1:T0+1ngSBFLxv
 github.com/magiconair/properties v1.8.0 h1:LLgXmsheXeRoUOBOjtwPQCWIYqM/LU1ayDtDePerRcY=
 github.com/magiconair/properties v1.8.0/go.mod h1:PppfXfuXeibc/6YijjN8zIbojt8czPbwD3XqdrwzmxQ=
 github.com/mattn/go-colorable v0.0.9/go.mod h1:9vuHe8Xs5qXnSaW/c/ABM9alt+Vo+STaOChaDxuIBZU=
+github.com/mattn/go-colorable v0.1.0 h1:v2XXALHHh6zHfYTJ+cSkwtyffnaOyR1MXaA91mTrb8o=
+github.com/mattn/go-colorable v0.1.0/go.mod h1:9vuHe8Xs5qXnSaW/c/ABM9alt+Vo+STaOChaDxuIBZU=
 github.com/mattn/go-isatty v0.0.4/go.mod h1:M+lRXTBqGeGNdLjl/ufCoiOlB5xdOkqRJdNxMWT7Zi4=
 github.com/mitchellh/go-homedir v1.1.0 h1:lukF9ziXFxDFPkA1vsr5zpc1XuPDn/wFntq5mG+4E0Y=
 github.com/mitchellh/go-homedir v1.1.0/go.mod h1:SfyaCUpYCn1Vlf4IUYiD9fPX4A5wJrkLzIz1N1q0pr0=
 github.com/mitchellh/mapstructure v1.1.2 h1:fmNYVwqnSfB9mZU6OS2O6GsXM+wcskZDuKQzvN1EDeE=
 github.com/mitchellh/mapstructure v1.1.2/go.mod h1:FVVH3fgwuzCH5S8UJGiWEs2h04kUh9fWfEaFds41c1Y=
-github.com/mobingi/sdk-go v0.0.0-20190220163044-2771e588cd6d h1:oYj48A/m52ER1KRon2t5QX/ZHM7x0FFrVBqX7MaJ/X0=
-github.com/mobingi/sdk-go v0.0.0-20190220163044-2771e588cd6d/go.mod h1:x2tCajZdSMjyvYRQujYQ1+xxRojMLjMZzasJW7z8AU4=
+github.com/mobingi/sdk-go v0.0.0-20190221024023-a67147dc03e3 h1:m/bb0WDbdaF5prQG0bujDY5K1OLCdRgJxcjv2su6D/0=
+github.com/mobingi/sdk-go v0.0.0-20190221024023-a67147dc03e3/go.mod h1:x2tCajZdSMjyvYRQujYQ1+xxRojMLjMZzasJW7z8AU4=
 github.com/mobingilabs/mobingi-sdk-go v0.1.32/go.mod h1:7v5FiajaUdXD7m9A+F3RP16DXYxRGyNgxRzf+nRCJcU=
 github.com/moul/gotty-client v1.7.0 h1:NHOzag4SgCEJv6qmvjxTNdzzUtGgKVLAzoF+nMG2ig8=
 github.com/moul/gotty-client v1.7.0/go.mod h1:CxM/JGtpRrEPve5H04IhxJrGhxgwxMc6jSP2T4YD60w=
@@ -69,6 +71,8 @@ golang.org/x/sys v0.0.0-20180905080454-ebe1bf3edb33/go.mod h1:STP8DvDyc/dI5b8T5h
 golang.org/x/sys v0.0.0-20181205085412-a5c9d58dba9a/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
 golang.org/x/sys v0.0.0-20190116161447-11f53e031339 h1:g/Jesu8+QLnA0CPzF3E1pURg0Byr7i6jLoX5sqjcAh0=
 golang.org/x/sys v0.0.0-20190116161447-11f53e031339/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
+golang.org/x/sys v0.0.0-20190220154126-629670e5acc5 h1:3Nsfe5Xa1wTt01QxlAFIY5j9ycDtS+d7mhvI8ZY5bn0=
+golang.org/x/sys v0.0.0-20190220154126-629670e5acc5/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
 golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/yaml.v2 v2.2.2 h1:ZCJp+EgiOT7lHqUV2J862kp8Qj64Jo6az82+3Td9dZw=

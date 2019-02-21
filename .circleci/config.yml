@@ -12,7 +12,6 @@ jobs:
         command: |
           GO111MODULE=on GOFLAGS=-mod=vendor go test -v ./...
           GO111MODULE=on GOFLAGS=-mod=vendor go build -v
-          ls -laF
 
   build-deploy:
     docker:

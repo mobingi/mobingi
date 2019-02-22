@@ -19,6 +19,6 @@ require (
 	github.com/smartystreets/goconvey v0.0.0-20181108003508-044398e4856c // indirect
 	github.com/spf13/cobra v0.0.3
 	github.com/spf13/viper v1.3.1
-	golang.org/x/sys v0.0.0-20190220154126-629670e5acc5 // indirect
+	golang.org/x/sys v0.0.0-20190222072716-a9d3bda3a223 // indirect
 	gopkg.in/yaml.v2 v2.2.2
 )

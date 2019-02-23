@@ -17,7 +17,6 @@ install:
   - echo %GOPATH%
   - set PATH=%GOPATH%\bin;c:\go\bin;%PATH%
   - set GO111MODULE=on
-  - set GOFLAGS=-mod=vendor
   - go version
   - go env
 

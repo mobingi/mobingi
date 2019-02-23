@@ -10,7 +10,8 @@ jobs:
         name: build
         shell: /bin/bash
         command: |
-          GO111MODULE=on GOFLAGS=-mod=vendor go test -v ./...
+          go version
+          GO111MODULE=on GOFLAGS=-mod=vendor go env
           GO111MODULE=on GOFLAGS=-mod=vendor go build -v
 
   build-deploy:
@@ -23,7 +24,8 @@ jobs:
         name: buildanddeploy
         shell: /bin/bash
         command: |
-          GO111MODULE=on GOFLAGS=-mod=vendor go test -v ./...
+          go version
+          GO111MODULE=on GOFLAGS=-mod=vendor go env
           GO111MODULE=on GOFLAGS=-mod=vendor go build -v
           tar cvzf mobingi-${CIRCLE_TAG}-linux-amd64.tar.gz mobingi
           ls -laF

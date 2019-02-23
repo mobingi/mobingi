@@ -10,9 +10,8 @@ jobs:
         name: build
         shell: /bin/bash
         command: |
-          go version
-          GO111MODULE=on GOFLAGS=-mod=vendor go env
-          GO111MODULE=on GOFLAGS=-mod=vendor go build -v
+          # GO111MODULE=on GOFLAGS=-mod=vendor go build -v
+          GO111MODULE=on go build -v
 
   build-deploy:
     docker:
@@ -24,9 +23,8 @@ jobs:
         name: buildanddeploy
         shell: /bin/bash
         command: |
-          go version
-          GO111MODULE=on GOFLAGS=-mod=vendor go env
-          GO111MODULE=on GOFLAGS=-mod=vendor go build -v
+          # GO111MODULE=on GOFLAGS=-mod=vendor go build -v
+          GO111MODULE=on go build -v
           tar cvzf mobingi-${CIRCLE_TAG}-linux-amd64.tar.gz mobingi
           ls -laF
           go get -u -v github.com/tcnksm/ghr

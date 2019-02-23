@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 
+	"github.com/mobingi/gosdk/pkg/util/cmdline"
 	"github.com/mobingi/mobingi/client"
 	"github.com/mobingi/mobingi/pkg/cli"
-	"github.com/mobingi/sdk-go/pkg/util/cmdline"
 	"github.com/mobingilabs/mobingi-sdk-go/mobingi/credentials"
 	"github.com/spf13/cobra"
 )

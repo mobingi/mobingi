@@ -4,8 +4,8 @@ package main
 import (
 	"log"
 
+	"github.com/mobingi/gosdk/pkg/util/cmdline"
 	"github.com/mobingi/mobingi/cmd"
-	"github.com/mobingi/sdk-go/pkg/util/cmdline"
 )
 
 func main() {

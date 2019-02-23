@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/mobingi/gosdk/pkg/util/simplelog"
 	"github.com/mobingi/mobingi/client/timeout"
 	"github.com/mobingi/mobingi/pkg/cli"
 	"github.com/mobingi/mobingi/pkg/cli/confmap"
-	"github.com/mobingi/sdk-go/pkg/util/simplelog"
 	sdkclient "github.com/mobingilabs/mobingi-sdk-go/client"
 	"github.com/mobingilabs/mobingi-sdk-go/mobingi/credentials"
 	"github.com/mobingilabs/mobingi-sdk-go/mobingi/session"

@@ -9,7 +9,7 @@ require (
 	github.com/jtolds/gls v4.2.1+incompatible // indirect
 	github.com/mattn/go-isatty v0.0.6 // indirect
 	github.com/mitchellh/go-homedir v1.1.0
-	github.com/mobingi/gosdk v0.0.0-20190310153436-7090720c9304
+	github.com/mobingi/gosdk v0.0.0-20190311093051-cc66b73fe8c0
 	github.com/mobingilabs/mobingi-sdk-go v0.1.32
 	github.com/moul/gotty-client v1.7.0 // indirect
 	github.com/pkg/errors v0.8.1

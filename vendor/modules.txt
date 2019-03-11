@@ -38,7 +38,7 @@ github.com/mattn/go-isatty
 github.com/mitchellh/go-homedir
 # github.com/mitchellh/mapstructure v1.1.2
 github.com/mitchellh/mapstructure
-# github.com/mobingi/gosdk v0.0.0-20190310153436-7090720c9304
+# github.com/mobingi/gosdk v0.0.0-20190311093051-cc66b73fe8c0
 github.com/mobingi/gosdk/pkg/util/cmdline
 github.com/mobingi/gosdk/pkg/util/simplelog
 # github.com/mobingilabs/mobingi-sdk-go v0.1.32
